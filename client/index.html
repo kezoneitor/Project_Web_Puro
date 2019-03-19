@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Funcionarios Estadísticas</title>
+</head>
+<body>
+      <!-- Interfaz inicial, elegir codigo y fechas -->
+      <div class="interfaz-inicial">
+            <label for="plazaCode">
+                  Código plaza:
+                  <input type="text" id="plazaCode">
+            </label>
+            <label for="fInicial">
+                  Fecha inicial:
+                  <input type="date" id="fInicial">
+            </label>
+            <label for="fFinal">
+                  Fecha final:
+                  <input type="date" id="fFinal">
+            </label>
+      </div>
+      <!-- Interfaz inicial, elegir codigo y fechas -->
+
+      <!-- componentes de acciones -->
+      <div class="general">
+            <!-- codigo de plaza -->
+            <div class="plaza-code">
+                  <h3>Plaza:</h3> 
+                  <label id="codigo">AA0000</label>
+            </div>
+            <!-- codigo de plaza -->
+
+            <!-- Escala para elegir -->
+            <div class="escalas">
+                  <h3>Escala:</h3>
+                  <input type="button" value="Días">
+                  <input type="button" value="Meses">
+                  <input type="button" value="Años">
+            </div>
+            <!-- Escala para elegir -->
+            <div class="grafico-estadistico">
+                  <div class="contenedor-barras">
+                        <div class="barra superior"></div>
+                        <div class="barra aceptado"></div>
+                        <div class="barra inferior"></div>
+                  </div>
+                  <div class="porcentajes"></div>
+                  <div class="fechas">
+                        <div class="fecha-inicial"></div>
+                        <div class="fecha-final"></div>
+                  </div>
+            </div>
+            <!-- Escala para elegir -->
+      </div>
+      <!-- componentes de acciones -->
+      <!-- Volver a la interfaz inicial -->
+      <div class="volver">
+
+      </div>
+      <!-- Volver a la interfaz inicial -->
+</body>
+</html>
