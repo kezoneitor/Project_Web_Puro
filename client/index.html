@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="tooltip.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/tooltip.css" />
     <title>Funcionarios Estadísticas</title>
   </head>
   <body>
@@ -32,13 +32,15 @@
 
     <!-- componentes de acciones -->
     <div class="general">
-      <!-- Escala para elegir -->
+        <!-- Escala para elegir -->
         <label class="escalas">
           <h3>Escala:</h3>
           <input type="button" onclick="byDay()" value="Días" />
           <input type="button" onclick="byMonth()" value="Meses" />
           <input type="button" onclick="byYear()" value="Años" />
         </label>
+        <!-- Escala para elegir -->
+        
         <!-- Grosor de las Barras-->
         <label class="grosor">
           <h3>Modifique el grosor de las barras</h3>
@@ -49,30 +51,29 @@
             value="10"
             class="slider"
             id="myRange"
-            style="width:100%; display: block;margin:auto;"
             oninput="changeScale(value)"
           />
         </label>
-      </div>
+        <!-- Grosor de las Barras-->
 
-      <!-- Escala para elegir -->
-      <div class="grafico-estadistico">
-        <div class="contenedor-barras" id="barContainer" style="">
-          <div class="barra superior"></div>
-          <div class="barra aceptado"></div>
-          <div class="barra inferior"></div>
+        <!-- Mostrar Grafico -->
+        <div class="grafico-estadistico">
+          <div class="contenedor-barras" id="barContainer">
+            <div class="barra superior"></div>
+            <div class="barra aceptado"></div>
+            <div class="barra inferior"></div>
+          </div>
+          <div class="porcentajes"></div>
+          <div class="fechas">
+            <div class="fecha-inicial"></div>
+            <div class="fecha-final"></div>
+          </div>
         </div>
-        <div class="porcentajes"></div>
-        <div class="fechas">
-          <div class="fecha-inicial"></div>
-          <div class="fecha-final"></div>
-        </div>
-      </div>
-      <!-- Escala para elegir -->
+        <!-- Mostrar Grafico -->
     </div>
     <!-- componentes de acciones -->
   </body>
-  <script src="./server/nombramientos.js"></script>
-  <script src="main.js"></script>
-  <script src="dragScript.js"></script>
+  <script src="./server/public_semana-7_NT0043.js"></script>
+  <script src="./JS/main.js"></script>
+  <script src="./JS/dragScript.js"></script>
 </html>

@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .bar {
   display: inline-block;
   margin: 1px;
@@ -19,16 +25,29 @@
 }
 div#barContainer {
   display: inline-flex;
-  min-width: 100%;
-  height: 300px;
   background-color: gainsboro;
-  margin-left: 50px;
+  
+  min-width: 89%;
+  height: 90%;
+  margin-left: 10%;
+  margin-top: 2%;
+
+  border-left: 3px solid gray;
+  border-bottom: 3px solid gray;
 }
+
+.general {
+  border-top: 5px solid lightseagreen;
+  width: 70%;
+  margin: auto;
+}
+
 .grafico-estadistico {
   position: relative;
-  margin: auto;
-  border: 5px solid black;
-  width: 95%;
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 100%;
+  height: 400px;
   overflow-y: hidden;
   white-space: nowrap;
   transition: all 0.2s;
@@ -37,9 +56,24 @@ div#barContainer {
   user-select: none;
   overflow-x: auto;
   cursor: grabbing;
+  
 }
+
+.grafico-estadistico::-webkit-scrollbar {
+  background-color: black;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.grafico-estadistico::-webkit-scrollbar-thumb {
+  background-color: lightseagreen;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
 .low {
-  background-color: greenyellow;
+  background-color: goldenrod;
 }
 .medium {
   background-color: green;
@@ -52,10 +86,18 @@ div#barContainer {
   margin: 10px;
 }
 .grosor {
-  width: 60%;
+  width: 30%;
   float: right;
   margin: 10px;
 }
+
+.grosor input {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+
 span:hover {
   height: 100px;
   background-color: grey;
