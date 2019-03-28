@@ -3,7 +3,7 @@ body {
   padding: 0;
   width: 100%;
 }
-
+/* Barra por defecto */
 .bar {
   display: inline-block;
   margin: 1px;
@@ -11,6 +11,7 @@ body {
   margin-top: auto;
   transition: all 0.5s;
 }
+/* Contenedor de pares de barras */
 .barPair {
   background-color: grey;
   height: 200px;
@@ -19,10 +20,12 @@ body {
   margin-top: auto;
   transition: all 0.5s;
 }
+/* Aclara un par al pasar el mouse por encima */
 .barPair:hover {
   background-color: gainsboro;
   height: 200px;
 }
+/* Configuraciones especificas del div donde se alojan las barras */
 div#barContainer {
   display: inline-flex;
   background-color: gainsboro;
@@ -36,12 +39,13 @@ div#barContainer {
   border-bottom: 3px solid gray;
 }
 
+/* Colores para divs */
 .general {
   border-top: 5px solid lightseagreen;
   width: 70%;
   margin: auto;
 }
-
+/* Estilo del contenedor del grafico */
 .grafico-estadistico {
   position: relative;
   border: 3px solid black;
@@ -59,6 +63,7 @@ div#barContainer {
   
 }
 
+/* Barra de desplazamiento */
 .grafico-estadistico::-webkit-scrollbar {
   background-color: black;
   border-bottom-left-radius: 40px;
