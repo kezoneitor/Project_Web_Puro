@@ -24,6 +24,10 @@ selectPlaza.selectedIndex = "-1";
 let selectedPlaza = "";
 let selectedScale = "day";
 // Se ejecuta cada vez que cambia el valor del select
+/**
+ * 
+ * @param {*} value 
+ */
 function changeSelect(value) {
   //limpia el contenido del grafico y ejecuta una acción distinta en base a la escala actual
   selectedPlaza = value;
