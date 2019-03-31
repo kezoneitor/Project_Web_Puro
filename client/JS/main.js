@@ -47,7 +47,6 @@ function changeSelect(value) {
     case "year":
       byYear();
       break;
-
     default:
       break;
   }

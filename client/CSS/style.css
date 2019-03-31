@@ -31,6 +31,7 @@ select {
   font-size: 10pt;
 }
 
+/* Colores para divs */
 .general {
   display: block;
   border-top: 5px solid var(--secondaryCo);
@@ -73,6 +74,7 @@ select {
   animation: animate 1s linear;
 }
 
+/* Barra de desplazamiento */
 .grafico-estadistico::-webkit-scrollbar {
   background-color: var(--primaryCo);
   border-bottom-left-radius: 40px;
