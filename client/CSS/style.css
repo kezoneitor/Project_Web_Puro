@@ -1,124 +1,252 @@
+:root {
+  --primaryCo: gray;
+  --secondaryCo: lightseagreen;
+  --letterCo: ghostwhite;
+}
+
+@font-face {
+  font-family: 'newFont';
+  src: url('../Font/open_dyslexic/OpenDyslexic-Regular.otf');
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: var(--letterCo);
+  font-family: 'newFont';
+  font-size: 12pt;
 }
 
-.bar {
-  display: inline-block;
-  margin: 1px;
-  width: 10px;
-  margin-top: auto;
-  transition: all 0.5s;
-}
-.barPair {
-  background-color: grey;
-  height: 200px;
-  display: flex;
-  margin-left: 1px;
-  margin-top: auto;
-  transition: all 0.5s;
-}
-.barPair:hover {
-  background-color: gainsboro;
-  height: 200px;
-}
-div#barContainer {
-  display: inline-flex;
-  background-color: gainsboro;
-  
-  min-width: 89%;
-  height: 90%;
-  margin-left: 10%;
-  margin-top: 2%;
-
-  border-left: 3px solid gray;
-  border-bottom: 3px solid gray;
+input,
+select {
+  outline: none;
+  background-color: var(--primaryCo);
+  color: var(--letterCo);
+  border-radius: 2px;
+  border: none;
+  height: 25px;
+  margin: 1%;
+  font-family: 'newFont';
+  font-size: 10pt;
 }
 
 .general {
-  border-top: 5px solid lightseagreen;
+  display: block;
+  border-top: 5px solid var(--secondaryCo);
   width: 70%;
   margin: auto;
 }
 
+.porcentajes {
+  font-size: 10pt;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 15px;
+  border-top: 2px dotted black;
+}
+
+.fecha {
+  display: flex;
+  position: absolute;
+  top: 103%;
+  left: -40px;
+  width: 100px;
+  height: 40px;
+}
+
 .grafico-estadistico {
   position: relative;
-  border: 3px solid black;
+  border: 3px solid var(--primaryCo);
   border-radius: 20px;
   width: 100%;
   height: 400px;
   overflow-y: hidden;
   white-space: nowrap;
-  transition: all 0.2s;
   transform: scale(0.98);
+  transition: all 0.2s;
   will-change: transform;
   user-select: none;
   overflow-x: auto;
   cursor: grabbing;
-  
+  animation: animate 1s linear;
 }
 
 .grafico-estadistico::-webkit-scrollbar {
-  background-color: black;
+  background-color: var(--primaryCo);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
+
 .grafico-estadistico::-webkit-scrollbar-thumb {
-  background-color: lightseagreen;
+  background-color: var(--secondaryCo);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+div#barContainer {
+  display: inline-flex;
+  background-color: rgba(188, 188, 188, 0.7);
+  min-width: 89%;
+  height: 300px;
+  margin-left: 10%;
+  margin-top: 20px;
+
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.bar {
+  display: inline-block;
+  margin: 0 1px 0 1px;
+  width: 10px;
+  margin-top: auto;
+  box-shadow: 0 0 6px inset rgba(0, 0, 0, 0.5);
+  border-radius: 10% 10% 0 0;
+}
 
 .low {
-  background-color: goldenrod;
+  background-color: gold;
+  transition: all 1s;
+  animation: lowBarAnimate 1s;
 }
 .medium {
   background-color: green;
+  transition: all 1.5s;
+  animation: mediumBarAnimate 1.5s;
 }
 .high {
   background-color: red;
+  transition: all 2s;
+  animation: highBarAnimate 2s;
 }
+
+.barPair {
+  background-color: var(--primaryCo);
+  height: 300px;
+  display: flex;
+  margin-left: 1px;
+  margin-top: auto;
+  transition: all 0.5s;
+}
+
+.barPair:hover {
+  background-color: var(--letterCo);
+  height: 300px;
+}
+
 .escalas {
   float: left;
   margin: 10px;
 }
+
 .grosor {
   width: 30%;
   float: right;
   margin: 10px;
 }
 
-.grosor input {
+.grosor input[type = range] {
+  -webkit-appearance: none;
   width: 100%;
   display: block;
   margin: auto;
+  background-color: var(--primaryCo);
+  border-radius: 20px;
 }
 
+.grosor input[type = range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--secondaryCo);
+  box-shadow: 0 0 6px inset rgba(0, 0, 0, 0.5);
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  color: var(--secondaryCo);
+  background-color: var(--secondaryCo);
+  height: 15px;
+  width: 7px;
+  margin: 3px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px inset rgba(0, 0, 0, 0.5);
+}
 
 span:hover {
   height: 100px;
-  background-color: grey;
+  transition: all 1s;
+  background-color: var(--primaryCo);
 }
-body {
-  background-color: ghostwhite;
-}
-input {
-  border-radius: 2px;
-  border: none;
-  height: 20px;
-  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.25);
-  margin: 1%;
-}
-select {
-  border-radius: 2px;
-  border: none;
-  height: 20px;
-  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.25);
-  margin: 1%;
-}
-input[type="button"] {
+
+.btn {
   margin: 2px;
+  background-color: var(--primaryCo);
+  color: var(--letterCo);
+}
+
+.active {
+  background-color: var(--secondaryCo);
+  color: black;
+}
+
+
+@keyframes animate {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes lowBarAnimate {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: gold;
+  }
+}
+
+@keyframes mediumBarAnimate {
+  0% {
+    background-color: black;
+  }
+
+  50% {
+    background-color: gold;
+  }
+
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes highBarAnimate {
+  0% {
+    background-color: black;
+  }
+
+  30% {
+    background-color: gold;
+  }
+
+  60% {
+    background-color: green;
+  }
+
+  100% {
+    background-color: red;
+  }
 }

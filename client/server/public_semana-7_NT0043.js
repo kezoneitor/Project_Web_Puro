@@ -16,7 +16,7 @@ const nombramientos = [{
       "ridnombramientos": "{227662,227663}"
 }, {
       "rdia": "2018-01-05",
-      "rporcentaje": "75",
+      "rporcentaje": "145",
       "ridnombramientos": "{227662,227663}"
 }, {
       "rdia": "2018-01-06",
